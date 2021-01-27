@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tab_routine"
+        android:title="Routine"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/tab_exercise"
+        android:title="Exercise"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/tab_record"
+        android:title="Record"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/tab_profile"
+        android:title="Profile"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+</menu>
