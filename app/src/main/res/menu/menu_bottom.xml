@@ -19,11 +19,13 @@
         android:title="Record"
         android:enabled="true"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_insert_chart_24"
         />
     <item
         android:id="@+id/tab_profile"
         android:title="Profile"
         android:enabled="true"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_how_to_reg_24"
         />
 </menu>
