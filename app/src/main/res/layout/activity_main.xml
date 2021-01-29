@@ -13,77 +13,77 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="10dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/hor_guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="50dp" />
+        app:layout_constraintGuide_begin="58dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/hor_guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="70dp" />
+        app:layout_constraintGuide_begin="68dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/hor_guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="70dp" />
+        app:layout_constraintGuide_end="68dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="10dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="50dp" />
+        app:layout_constraintGuide_begin="58dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="100dp" />
+        app:layout_constraintGuide_begin="116dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="100dp" />
+        app:layout_constraintGuide_end="116dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="80dp" />
+        app:layout_constraintGuide_end="106dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="50dp" />
+        app:layout_constraintGuide_end="58dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="20dp" />
+        app:layout_constraintGuide_end="10dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/ver_center"
@@ -123,16 +123,43 @@
         app:layout_constraintTop_toBottomOf="@id/hor_guideline1"
         app:srcCompat="@drawable/ic_baseline_menu_24" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom"
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:alwaysDrawnWithCache="true"
-        android:background="#4884D4"
-        app:elevation="0dp"
-        app:itemIconTint="@drawable/checked"
-        app:itemTextColor="@color/white"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hor_guideline4"
-        app:menu="@menu/menu_bottom" />
+        app:abb_selectedTabType="icon"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorMargin="3dp"
+        app:abb_indicatorAppearance="square"
+        app:abb_tabs="@menu/menu"
+        app:abb_selectedIndex="0"
+        app:abb_tabColorSelected="@color/default_color"
+        app:abb_indicatorColor="@color/default_color"
+        app:abb_tabColor="@color/disabled_color"
+        />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
+    </FrameLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
