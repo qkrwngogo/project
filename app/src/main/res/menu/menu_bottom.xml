@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/tab_routine"
         android:title="Routine"
         android:enabled="true"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/jump_rope"
         />
     <item
         android:id="@+id/tab_exercise"
         android:title="Exercise"
         android:enabled="true"
         app:showAsAction="ifRoom"
+        android:icon="@drawable/pull_up"
         />
     <item
         android:id="@+id/tab_record"
         android:title="Record"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_insert_chart_24"
+        android:icon="@drawable/calendar"
         />
     <item
         android:id="@+id/tab_profile"
         android:title="Profile"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_how_to_reg_24"
+        android:icon="@drawable/woman"
         />
 </menu>
