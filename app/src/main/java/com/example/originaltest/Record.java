@@ -9,27 +9,27 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Routine extends Fragment {
+public class Record extends Fragment {
     private int page;
 
-    public static Routine newInstance (int page) {
-        Routine routine = new Routine();
+    public static Record newInstance (int page) {
+        Record record = new Record();
         Bundle args = new Bundle();
-        args.putInt("0",page);
-        routine.setArguments(args);
-        return routine;
+        args.putInt("2",page);
+        record.setArguments(args);
+        return record;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        page = getArguments().getInt("0",0);
+        page = getArguments().getInt("2",0);
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_routine, container, false);
+        View view = inflater.inflate(R.layout.fragment_record, container, false);
         return view;
     }
 }

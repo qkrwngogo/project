@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         bottomBar.setupWithViewPager(vpPager);
     }
     public static class MyPagerAdapter extends FragmentPagerAdapter {
-        private static int NUM_ITEMS = 2;
+        private static int NUM_ITEMS = 4;
         public MyPagerAdapter(FragmentManager fragmentManager) {
             super(fragmentManager);
         }
@@ -45,9 +45,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return Routine.newInstance(0,"Routine");
+                    return Routine.newInstance(0);
                 case 1:
-                    return Exercise.newInstance(1,"page 2");
+                    return Exercise.newInstance(1);
+                case 2:
+                    return Record.newInstance(2);
+                case 3:
+                    return Profile.newInstance(3);
                 default:
                     return null;
             }
