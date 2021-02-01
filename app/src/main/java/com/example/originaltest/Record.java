@@ -12,18 +12,9 @@ import androidx.fragment.app.Fragment;
 public class Record extends Fragment {
     private int page;
 
-    public static Record newInstance (int page) {
+    public static Record newInstance () {
         Record record = new Record();
-        Bundle args = new Bundle();
-        args.putInt("2",page);
-        record.setArguments(args);
         return record;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        page = getArguments().getInt("2",0);
     }
 
     @Nullable

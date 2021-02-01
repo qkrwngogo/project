@@ -12,18 +12,9 @@ import androidx.fragment.app.Fragment;
 public class Routine extends Fragment {
     private int page;
 
-    public static Routine newInstance (int page) {
+    public static Routine newInstance () {
         Routine routine = new Routine();
-        Bundle args = new Bundle();
-        args.putInt("0",page);
-        routine.setArguments(args);
         return routine;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        page = getArguments().getInt("0",0);
     }
 
     @Nullable

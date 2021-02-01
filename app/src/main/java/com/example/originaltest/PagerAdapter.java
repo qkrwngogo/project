@@ -1,13 +1,14 @@
 package com.example.originaltest;
 
+
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
 class PagerAdapter extends FragmentPagerAdapter {
+
     private static int NUM_ITEMS = 4;
     public PagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -23,21 +24,15 @@ class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return Routine.newInstance(0);
+                return Routine.newInstance();
             case 1:
-                return Exercise.newInstance(1);
+                return Exercise.newInstance();
             case 2:
-                return Record.newInstance(2);
+                return Record.newInstance();
             case 3:
-                return Profile.newInstance(3);
+                return Profile.newInstance();
             default:
                 return null;
         }
-    }
-
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return "Page" + position;
     }
 }
