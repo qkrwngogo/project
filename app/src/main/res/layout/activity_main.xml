@@ -137,6 +137,7 @@
         app:abb_tabColorSelected="@color/default_color"
         app:abb_indicatorColor="@color/default_color"
         app:abb_tabColor="@color/disabled_color"
+
         />
 
     <FrameLayout
