@@ -9,11 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Exercise extends Fragment {
-
-    public static Exercise newInstance () {
-        Exercise exercise = new Exercise();
-        return exercise;
+public class Menu extends Fragment {
+    public static Menu newInstance () {
+        Menu menu = new Menu();
+        return menu;
     }
 
 
@@ -21,7 +20,7 @@ public class Exercise extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_exercise, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu, container, false);
         return view;
     }
 }

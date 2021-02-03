@@ -128,12 +128,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/transparent"
+        app:srcCompat="@drawable/ic_baseline_search_24"
         app:layout_constraintBottom_toTopOf="@id/hor_guideline2"
         app:layout_constraintEnd_toStartOf="@id/ver_guideline6"
         app:layout_constraintStart_toEndOf="@id/ver_guideline5"
         app:layout_constraintTop_toBottomOf="@id/hor_guideline1"
-        app:srcCompat="@drawable/ic_baseline_search_24"
-        android:visibility="gone"/>
+        />
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/bottom_bar"
@@ -151,17 +151,37 @@
         app:abb_tabColor="@color/disabled_color"
 
         />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/ver_guideline3"
+        app:layout_constraintEnd_toStartOf="@id/ver_guideline4"
+        app:layout_constraintBottom_toTopOf="@id/hor_guideline2"
+        app:layout_constraintTop_toBottomOf="@id/hor_guideline1"
+        android:weightSum="2"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="end"/>
+
+    </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="@dimen/layout_horizontal"
-        android:layout_marginVertical="@dimen/layout_vertical">
+        android:layout_height="match_parent">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/layout_horizontal"
+            android:layout_marginVertical="@dimen/layout_vertical"
             android:clipChildren="false"
             android:clipToPadding="false" />
     </FrameLayout>
