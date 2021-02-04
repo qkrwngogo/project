@@ -109,7 +109,7 @@
         app:layout_constraintEnd_toStartOf="@id/ver_guideline2"
         app:layout_constraintStart_toEndOf="@id/ver_guideline1"
         app:layout_constraintTop_toBottomOf="@id/hor_guideline1"
-        app:srcCompat="@drawable/ic_baseline_home_24" />
+        app:srcCompat="@drawable/ic_bar_home" />
 
     <ImageButton
         android:id="@+id/menu"

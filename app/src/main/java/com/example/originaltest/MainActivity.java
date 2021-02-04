@@ -1,9 +1,12 @@
 package com.example.originaltest;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,20 +22,24 @@ import nl.joery.animatedbottombar.AnimatedBottomBar;
 
 public class MainActivity extends AppCompatActivity {
     FragmentPagerAdapter adapterViewPager;
-    FragmentPagerAdapter adapterViewMenu;
+    ImageView imageView;
+    ImageButton homeBtn, menuBtn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ViewPager container = findViewById(R.id.viewPager_container);
         adapterViewPager = new PagerAdapter((getSupportFragmentManager()));
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.fragment_popup_login);
+
+        imageView = (ImageView) findViewById(R.id.close);
         container.setAdapter(adapterViewPager);
         AnimatedBottomBar bottomBar = findViewById(R.id.bottom_bar);
         bottomBar.setupWithViewPager(container);
         // Home Button
-        ImageButton homeBtn = findViewById(R.id.home);
-        ImageButton menuBtn = findViewById(R.id.menu);
-
+        homeBtn = findViewById(R.id.home);
+        menuBtn = findViewById(R.id.menu);
         homeBtn.setOnClickListener(v -> bottomBar.selectTabById(R.id.nav_routine, true));
         // Menu Button
 

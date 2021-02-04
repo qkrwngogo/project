@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Profile extends Fragment {
-    private int page;
 
     public static Profile newInstance () {
         Profile profile = new Profile();

@@ -10,8 +10,10 @@
     android:layout_marginBottom="78dp"
     tools:context=".Routine">
        <Button
+           android:id="@+id/routine"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
-           android:text="Routine"/>
+           android:text="Routine"
+           android:onClick="onClick"/>
 
 </FrameLayout>

@@ -8,15 +8,15 @@
     <item
         android:id="@+id/nav_exercise"
         android:title="Exercise"
-        android:icon="@drawable/pull_up"/>
+        android:icon="@drawable/ic_bar_exercise"/>
 
     <item
         android:id="@+id/nav_record"
         android:title="Record"
-        android:icon="@drawable/ic_baseline_insert_chart_24"/>
+        android:icon="@drawable/ic_bar_record"/>
 
     <item
         android:id="@+id/nav_profile"
         android:title="Profile"
-        android:icon="@drawable/woman"/>
+        android:icon="@drawable/ic_bar_profile"/>
 </menu>

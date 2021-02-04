@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Record extends Fragment {
-    private int page;
 
     public static Record newInstance () {
         Record record = new Record();
