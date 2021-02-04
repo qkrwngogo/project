@@ -15,6 +15,7 @@ import androidx.appcompat.view.menu.MenuAdapter;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import nl.joery.animatedbottombar.AnimatedBottomBar;
@@ -42,5 +43,10 @@ public class MainActivity extends AppCompatActivity {
         // Menu Button
 
     }
-
+    // fragment 호출 함수
+    public void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.modal, fragment);
+    }
 }

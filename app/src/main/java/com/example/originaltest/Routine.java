@@ -6,15 +6,19 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import java.util.zip.Inflater;
 
 public class Routine extends Fragment {
 
@@ -44,7 +48,8 @@ public class Routine extends Fragment {
             signUpBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    View signInPage = dialog.findViewById(R.id.sign_in_page);
+                    signInPage.setVisibility(View.INVISIBLE);
                 }
             });
             // 닫기 버튼 클릭시 화면 닫힘
