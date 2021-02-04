@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ViewPager container = findViewById(R.id.viewPager_container);
         adapterViewPager = new PagerAdapter((getSupportFragmentManager()));
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.fragment_popup_login);
 
         imageView = (ImageView) findViewById(R.id.close);
         container.setAdapter(adapterViewPager);

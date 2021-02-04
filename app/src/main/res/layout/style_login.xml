@@ -4,7 +4,8 @@
     android:layout_height="450dp"
     android:layout_gravity="center"
     android:background="@drawable/popup_modal"
-    android:padding="5dp">
+    android:padding="5dp"
+    >
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,28 +40,55 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:background="#bdc3c7"
+        android:inputType="textPassword"
         android:hint=" Password"
         android:drawableLeft="@drawable/ic_password"/>
 
     <CheckBox
         android:id="@+id/auto_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
         android:layout_below="@id/txt_password"
         android:layout_alignLeft="@id/txt_password"
         android:layout_marginTop="10dp"
         android:text="자동 로그인" />
     <Button
-        android:layout_width="300dp"
+        android:layout_width="140dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/auto_login"
         android:clickable="true"
-        android:id="@+id/btn_login"
-        android:text="login"
+        android:id="@+id/btn_sign_in"
+        android:text="sign in"
         android:textSize="20dp"
         android:textColor="#ffffff"
-        android:background="@drawable/buttonstyleblack"/>
+        android:background="@drawable/buttonstyleblack"
+        android:layout_alignLeft="@+id/txt_password"/>
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/auto_login"
+        android:clickable="true"
+        android:id="@+id/btn_sign_up"
+        android:text="sign up"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/buttonstyleblack"
+        android:layout_alignRight="@+id/txt_password"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:layout_below="@id/txt_password"
+        android:layout_alignRight="@id/txt_password"
+        android:layout_marginTop="10dp"
+        android:text="ID / PW 찾기"
+        android:textColor="@color/disabled_color"
+        android:background="@color/transparent"
+        android:linksClickable="true"
+        />
 
 </RelativeLayout>
