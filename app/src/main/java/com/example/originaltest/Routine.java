@@ -36,6 +36,7 @@ public class Routine extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
         // 루틴 버튼 클릭 시 로그인 모달창 띄우기
         Button routineBtn = getView().findViewById(R.id.routine);
         routineBtn.setOnClickListener(v -> {
@@ -45,21 +46,15 @@ public class Routine extends Fragment {
             dialog.setContentView(R.layout.style_login);
             // 회원 가입 버튼 클릭시 창 이동
             Button signUpBtn = dialog.findViewById(R.id.btn_sign_up);
-            signUpBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    View signInPage = dialog.findViewById(R.id.sign_in_page);
-                    signInPage.setVisibility(View.INVISIBLE);
-                }
+            signUpBtn.setOnClickListener(v1 -> {
+                View signInPage = dialog.findViewById(R.id.sign_in_page);
+                signInPage.setVisibility(View.INVISIBLE);
+                View signUpPage = dialog.findViewById(R.id.sign_up_page);
+                signUpPage.setVisibility(View.VISIBLE);
             });
             // 닫기 버튼 클릭시 화면 닫힘
             ImageView closeBtn = dialog.findViewById(R.id.close);
-            closeBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
+            closeBtn.setOnClickListener(v12 -> dialog.dismiss());
             dialog.show();
         });
     }

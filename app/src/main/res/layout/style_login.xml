@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:id="@+id/sign_in_page"
-        android:visibility="invisible"
+        android:visibility="visible"
         >
 
         <ImageView
@@ -108,14 +108,34 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:id="@+id/sign_up_page"
-        android:visibility="visible"
+        android:visibility="invisible"
         >
+        <!-- Skip Button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_up_tab"
+            android:layout_alignParentRight="true"
+            android:text="skip"
+            android:background="@color/transparent"/>
         <com.google.android.material.tabs.TabLayout
             android:layout_width="300dp"
             android:layout_height="40dp"
             app:tabMode="fixed"
-            android:id="@+id/sign_up_tab"
-            />
+            android:id="@+id/sign_up_tab">
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Step 1"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Step 2"/>
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Step 3"/>
+        </com.google.android.material.tabs.TabLayout>
         <FrameLayout
             android:id="@+id/sign_up_container"
             android:layout_width="match_parent"
@@ -123,6 +143,7 @@
             android:layout_below="@+id/sign_up_tab">
 
         </FrameLayout>
+        <!-- Next Button -->
     </RelativeLayout>
     <!-- END Sign Up Modal -->
 </FrameLayout>
